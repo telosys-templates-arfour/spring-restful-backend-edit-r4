@@ -1,0 +1,9 @@
+#checkId($entity)
+package ${target.javaPackageFromFolder($SRC)};
+
+import ${target.javaPackageFromFolder($SRC)}.gen.${entity.name}RepositoryGen;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+@RepositoryRestResource(collectionResourceRel = "${fn.toLowerCase("${entity.name}")}s", path = "${fn.toLowerCase("${entity.name}s")}")
+public interface ${entity.name}Repository extends ${entity.name}RepositoryGen {
+}

@@ -1,0 +1,17 @@
+#checkId($entity)
+package ${target.javaPackageFromFolder($SRC)};
+
+import ${target.javaPackageFromFolder($SRC)}.gen.${entity.name}Gen;
+import lombok.*;
+
+import javax.persistence.*;
+
+@Entity
+@javax.persistence.Table(name = "${entity.databaseTable}")
+@Getter
+@Setter
+@NoArgsConstructor
+@Builder
+public class ${entity.name} extends ${entity.name}Gen {
+
+}
